@@ -4,6 +4,15 @@ import styles from './styles.module.css'
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
+      <header className={styles.header}>
+            <nav className={styles.nav}>
+                <ul className={styles.navList}>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about/">about</a></li>
+                    <li><a href="/blog/">blog</a></li>
+                </ul>
+            </nav>
+        </header>
       <main className={styles.main}>
         <div className={styles.titleContainer}>
           <div className={styles.title}>
@@ -52,7 +61,6 @@ export default function Home() {
             <p className={styles.blogListItemTag}>aaa</p>
           </li>
         </ul>
-        <a href="/about/">this is takayuki takahashi</a>
       </main>
     </div>
   );
