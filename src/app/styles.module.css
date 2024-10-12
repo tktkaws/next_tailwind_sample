@@ -7,12 +7,6 @@
     grid-column: 2;
 }
 
-
-.aa {
-    display: grid;
-    grid-auto-flow: column;
-    margin-top: 2rem;
-}
 .titleContainer {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -28,6 +22,8 @@
     color: #FFFFFF;
     box-sizing: border-box;
     font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: .2em;
 }
 .titleText{
     font-weight: bold;
@@ -36,6 +32,7 @@
     text-align: center;
 }
 .blogList {
+    margin-top: 2rem;
     display: grid;
     width: 100%;
 }
@@ -52,4 +49,13 @@
     color: #FFFFFF;
     padding: .2em 1em;
     border-radius: .2em;
+}
+
+.heading {
+    margin-top: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.text {
+    padding-top: 1rem;
 }
