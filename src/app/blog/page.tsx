@@ -4,17 +4,6 @@ import styles from '../styles.module.css'
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
-        <header className={styles.header}>
-            <div className={styles.logo}>Front Dispatch</div>
-            <div className={styles.headerTitle}>WAI-ARIAについての備忘録</div>
-            <nav className={styles.nav}>
-                <ul className={styles.navList}>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/about/">about</a></li>
-                    <li><a href="/blog/">blog</a></li>
-                </ul>
-            </nav>
-        </header>
         <main className={styles.main}>
             <div className={styles.blogTitleContainer}>
             <div className={styles.blogTitle}>
@@ -98,10 +87,6 @@ export default function Home() {
                 </div>
             </article>
         </main>
-        <footer className={styles.footer}>
-            <div className={styles.copyLight}>© Takayuki Takahashi</div>
-            <div></div>
-        </footer>
     </div>
   );
 }

@@ -15,11 +15,12 @@
 .logo {
     /* grid-row: 1; */
     /* grid-column: 1; */
+    justify-self: end;
 }
 .headerTitle {
     /* grid-row: 1; */
     /* grid-column: 2; */
-    /* visibility: hidden; */
+    visibility: hidden;
     text-align: center;
 }
 .headerTitle.is-active {
