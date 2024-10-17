@@ -52,28 +52,30 @@
 
 .titleContainer {
     
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: grid;
-    place-items: center;
+    justify-self: start;
+    align-items: start;
 }
 .title {
     display: grid;
-    place-items: center;
-    width: 20rem;
-    height: 20rem;
-    background-color: #555555;
-    color: #FFFFFF;
+    justify-self: start;
+    align-items: start;
+    /* width: 20rem; */
+    /* height: 20rem; */
+    /* background-color: #555555; */
+    /* color: #FFFFFF; */
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 10rem;
     text-transform: uppercase;
     border-radius: .2em;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
 }
 .titleText{
-    font-weight: bold;
     height: fit-content;
     width: fit-content;
-    text-align: center;
 }
 .blogList {
     margin-top: 2rem;
@@ -81,18 +83,44 @@
     width: 100%;
 }
 .blogListItem {
+    font-family: "Noto Sans JP", sans-serif;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 60% 1fr auto;
     column-gap: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: solid 1px;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
+    border-bottom: solid 1px #CCCCCC;
+    height: 4rem;
+    align-items: center;
+    font-size: calc(1rem * 17 / 16);
+    /* font-weight: 500; */
+}
+.blogListItem:first-of-type {
+    border-top: solid 1px #CCCCCC;
+}
+.blogListItemDate {
+    grid-row: 1;
+    grid-column: 2;
+    }
+.blogListItemTitle{
+    grid-row: 1;
+    grid-column: 1;
 }
 .blogListItemTag {
-    background-color: #555555;
-    color: #FFFFFF;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: .8rem;
+    color: #555555;
     padding: .2em 1em;
-    border-radius: .2em;
+    border: solid 1px #CCCCCC;
+    border-radius: .95em;
+}
+.blogListItemTagWrapper {
+    grid-column: 3;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+    justify-content: end;
 }
 
 .heading {
