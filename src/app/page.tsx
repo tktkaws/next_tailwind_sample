@@ -12,26 +12,26 @@ export default function Home() {
             <p className={styles.titleText}>front <br />dispatch</p>
           </div>
         </div>
-        <div className='flex justify-center items-center'>
-        <motion.div
-   initial={{ x: -100 }}
-   animate={{ x: 200 }}
-   transition={{ duration: 2 }}
-   className='w-[170px] h-[170px] rounded-full bg-sky-500'>
-</motion.div>
-          <motion.div
+        {/* <div className='flex justify-center items-center'>
+                  <motion.div
             initial={{ x: -100 }}
+            animate={{ x: 200 }}
+            transition={{ duration: 2 }}
+            className='w-[170px] h-[170px] rounded-full bg-sky-500'>
+          </motion.div>
+                    <motion.div
+                      initial={{ x: -100 }}
+                      className='w-[170px] h-[170px] rounded-full bg-sky-500'>
+                    </motion.div>
+                    <motion.div
+            whileHover={{ opacity: 0 }}
             className='w-[170px] h-[170px] rounded-full bg-sky-500'>
           </motion.div>
           <motion.div
-   whileHover={{ opacity: 0 }}
-   className='w-[170px] h-[170px] rounded-full bg-sky-500'>
-</motion.div>
-<motion.div
-   whileTap={{ scale: 2 }}
-   className='w-[170px] h-[170px] rounded-full bg-sky-500'>
-</motion.div>
-        </div>
+            whileTap={{ scale: 2 }}
+            className='w-[170px] h-[170px] rounded-full bg-sky-500'>
+          </motion.div>
+        </div> */}
         <p>
           アクセシビリティ、モダンフロントエンド関係を中心とした技術ブログです。
         </p>

@@ -6,9 +6,13 @@ export default function Home() {
     <div className="font-[family-name:var(--font-geist-sans)]">
         <main className={styles.main}>
             <div className={styles.blogTitleContainer}>
-            <div className={styles.blogTitle}>
-                <p className={styles.blogTitleText}>WAI-ARIAについての備忘録</p>
-            </div>
+                <div className={styles.blogTitleContainerInner}>
+                    <div className={styles.blogTitle}>
+                        <p className={styles.blogTitleText}>WAI-ARIAについての備忘録</p>
+                    </div>
+                    <p className={styles.blogDate}>2024.10.24</p>
+                    <p className={styles.blogTag}>A11Y</p>
+                </div>
             </div>
             <article className={styles.article}>
                 <div className={styles.articleMainContainer}>
