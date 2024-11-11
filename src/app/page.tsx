@@ -38,6 +38,23 @@ export default function Home() {
         <p>
           自身の知識を整理することを第一の目的としています。
         </p>
+        <ul className={styles.tabList}>
+          <li className={styles.tabListItem}>
+            <a href="">ALL</a>
+          </li>
+          <li className={styles.tabListItem}>
+            <a href="">A11Y</a>
+          </li>
+          <li className={styles.tabListItem}>
+            <a href="">HTML</a>
+          </li>
+          <li className={styles.tabListItem}>
+            <a href="">CSS</a>
+          </li>
+          <li className={styles.tabListItem}>
+            <a href="">Java Script</a>
+          </li>
+        </ul>
         <ul className={styles.blogList}>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
