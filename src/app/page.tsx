@@ -59,22 +59,30 @@ export default function Home() {
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトルブログタイトルブログタイトル</p>
-            <p className={styles.blogListItemTag}>A11Y</p>
+            <div className={styles.blogListItemTagWrapper}>
+              <p className={styles.blogListItemTag}>A11Y</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトルブログタイトル</p>
-            <p className={styles.blogListItemTag}>Java Script</p>
+            <div className={styles.blogListItemTagWrapper}>
+              <p className={styles.blogListItemTag}>Java Script</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトル</p>
+            <div className={styles.blogListItemTagWrapper}>
             <p className={styles.blogListItemTag}>HTML</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトル</p>
+            <div className={styles.blogListItemTagWrapper}>
             <p className={styles.blogListItemTag}>CSS</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
@@ -87,17 +95,26 @@ export default function Home() {
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトル</p>
-            <p className={styles.blogListItemTag}>A11Y</p>
+             <div className={styles.blogListItemTagWrapper}>
+              <p className={styles.blogListItemTag}>A11Y</p>
+              <p className={styles.blogListItemTag}>Java Script</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトル</p>
-            <p className={styles.blogListItemTag}>A11Y</p>
+             <div className={styles.blogListItemTagWrapper}>
+              <p className={styles.blogListItemTag}>A11Y</p>
+              <p className={styles.blogListItemTag}>Java Script</p>
+            </div>
           </li>
           <li className={styles.blogListItem}>
             <p className={styles.blogListItemDate}>2024.10.12</p>
             <p className={styles.blogListItemTitle}>ブログタイトルブログタイトル</p>
-            <p className={styles.blogListItemTag}>A11Y</p>
+             <div className={styles.blogListItemTagWrapper}>
+              <p className={styles.blogListItemTag}>A11Y</p>
+              <p className={styles.blogListItemTag}>Java Script</p>
+            </div>
           </li>
         </ul>
       </main>

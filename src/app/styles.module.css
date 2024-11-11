@@ -139,21 +139,22 @@
     grid-column: 1;
     font-weight: bold;
 }
-.blogListItemTag {
+
+.blogListItemTagWrapper {
     grid-row: 2;
     grid-column: 2;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1rem;
+    justify-content: end;
+    width: fit-content;
+}
+.blogListItemTag {
     font-size: .8rem;
     color: #555555;
     padding: .2em 1em;
     border: solid 1px #CCCCCC;
     border-radius: .95em;
-}
-.blogListItemTagWrapper {
-    grid-column: 3;
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 1rem;
-    justify-content: end;
 }
 
 .heading {
