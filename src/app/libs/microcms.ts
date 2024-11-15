@@ -33,3 +33,19 @@ export type Blog = {
     });
     return listData;
   };
+
+  export const getBlogDetail = async (
+    contentId: string,
+    queries?: MicroCMSQueries
+  ) => {
+    const detailData = await client.getListDetail<Blog>({
+      customRequestInit: {
+        cache: "no-store",
+       },
+      endpoint: 'blogs',
+      contentId,
+      queries,
+    });
+  
+    return detailData;
+  };
