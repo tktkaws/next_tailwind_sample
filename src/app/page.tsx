@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
 import { getBlogsList } from "@/app/libs/microcms";
 import { formatDate } from "@/app/libs/utils";
+import Link from "next/link";
 
 export default async function Home() {
   const data = await getBlogsList({});
@@ -49,10 +50,29 @@ export default async function Home() {
         </ul>
         <ul className={styles.blogList}>
           {data.contents.map((blog) => (
+            
             <li key={blog.id}>
-              <a href="" className={styles.blogListItem}>
+              <Link  href={`/blog/${blog.id}`} className={styles.blogListItem}>
+              <p className={styles.blogListItemTitle}>{blog.title}</p>
+                <p className={styles.blogListItemDate}>{formatDate(blog.publishedAt)}</p>
+                <div className={styles.blogListItemTagWrapper}>
+                  {blog.tags.map((tag) => (
+                    <p className={styles.blogListItemTag}>
+                      {tag.title}
+                    </p>
+                  ))}
+                </div>
+                <img
+                  src="/Arrow1.svg"
+                  alt=""
+                  className={styles.blogListItemArrow}
+                />
+              
+              </Link>
+
+              {/* <a href="" className={styles.blogListItem}>
                 <p className={styles.blogListItemTitle}>{blog.title}</p>
-                <p className={styles.blogListItemDate}>{formatDate(blog.updatedAt)}</p>
+                <p className={styles.blogListItemDate}>{formatDate(blog.publishedAt)}</p>
                 <div className={styles.blogListItemTagWrapper}>
                   {blog.tags.map((tag) => (
                     <p key={tag} className={styles.blogListItemTag}>
@@ -65,7 +85,7 @@ export default async function Home() {
                   alt=""
                   className={styles.blogListItemArrow}
                 />
-              </a>
+              </a> */}
             </li>
           ))}
         </ul>
