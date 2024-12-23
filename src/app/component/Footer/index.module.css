@@ -1,0 +1,13 @@
+.footer {
+    margin-top: 4rem;
+    border-top: solid 1px#cfcece;
+    display: grid;
+    grid-template-columns: 1fr 1000px 1fr;
+    height: 3rem;
+    align-items: center;
+}
+
+.copyLight {
+    grid-column: 2;
+    text-align: center;
+}
