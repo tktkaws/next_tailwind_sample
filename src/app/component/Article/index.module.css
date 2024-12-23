@@ -305,6 +305,7 @@
 .articleMainContainer {
     grid-column: 1;
     margin-right: 2rem;
+    margin-top: 2rem;
 }
 
 .articleListContainer {
