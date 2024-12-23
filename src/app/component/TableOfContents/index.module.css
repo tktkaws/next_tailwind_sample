@@ -12,5 +12,9 @@
   /* border: solid 1px; */
 }
 
-.TableOfContentsList li a {
+.TableOfContentsList li a::before {
+  content: "🔗";
+  content: "●";
+  margin-right: .5rem;
+  color: #e5e7eb;
 }
