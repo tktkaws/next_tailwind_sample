@@ -1,14 +1,24 @@
-import styles from "./styles.module.css";
+import styles from "../../styles.module.css";
 import { getBlogsList, getAllTags } from "@/app/_libs/microcms";
-import { formatDate } from "@/app/_libs/utils";
 import Link from "next/link";
-import CardList from "@/app/component/CardList"; 
+import CardList from "@/app/component/CardList";
 import { MEMBERS_LIST_LIMIT } from '@/app/_constants'
 
+export async function generateStaticParams() {
+  const tags = await getAllTags({});
+  return tags.contents.map((tag) => ({
+    tagId: tag.id,
+  }));
+}
 
-export default async function Home() {
+export default async function TagPage({
+  params: { tagId },
+}: {
+  params: { tagId: string };
+}) {
   const data = await getBlogsList({
     limit: MEMBERS_LIST_LIMIT,
+    filters: `tags[contains]${tagId}`,
   });
   const tags = await getAllTags({});
 
@@ -29,19 +39,24 @@ export default async function Home() {
         <p>自身の知識を整理することを第一の目的としています。</p>
         <ul className={styles.tabList}>
           <li>
-            <Link href="/" className={`${styles.tabListItem} ${styles.active}`}>
+            <Link href="/" className={styles.tabListItem}>
               ALL
             </Link>
           </li>
           {tags.contents.map((tag) => (
             <li key={tag.id}>
-              <Link href={`/tags/${tag.id}`} className={styles.tabListItem}>
+              <Link 
+                href={`/tags/${tag.id}`} 
+                className={`${styles.tabListItem} ${
+                  tag.id === tagId ? styles.active : ""
+                }`}
+              >
                 {tag.title}
               </Link>
             </li>
           ))}
         </ul>
-        <CardList data={data}/>
+        <CardList data={data} />
       </main>
     </div>
   );
