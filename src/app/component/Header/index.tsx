@@ -5,7 +5,7 @@ export default function Header() {
       <>
          <header className={styles.header}>
             <div className={styles.logo}><a href="/">Front Dispatch</a></div>
-            <div className={styles.headerTitle}>WAI-ARIAについての備忘録</div>
+            {/* <div className={styles.headerTitle}>WAI-ARIAについての備忘録</div> */}
             <nav className={styles.nav}>
                 <ul className={styles.navList}>
                     <li><a href="/">home</a></li>

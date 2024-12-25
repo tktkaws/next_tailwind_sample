@@ -2,9 +2,26 @@
     margin-top: 4rem;
     border-top: solid 1px#cfcece;
     display: grid;
-    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-columns: 1fr 1200px 1fr;
     height: 3rem;
     align-items: center;
+}
+@media screen and (max-width:1440px) {
+    .footer {
+        grid-template-columns: 1fr 1200px 1fr;
+    }
+}
+
+@media screen and (max-width:1217px) {
+    .footer {
+        grid-template-columns: 4% 1fr 4%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .footer {
+        grid-template-columns: 4% 1fr 4%;
+    }
 }
 
 .copyLight {
