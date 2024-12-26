@@ -302,15 +302,34 @@
     grid-template-columns: 80% 20%;
 }
 
+@media screen and (max-width:1024px) {
+    .article {
+        grid-template-columns: 100%;
+    }
+}
+
+
 .articleMainContainer {
     grid-column: 1;
     margin-right: 2rem;
     margin-top: 2rem;
 }
 
+@media screen and (max-width:1024px) {
+    .articleMainContainer {
+        margin-right: 0;
+    }
+}
+
 .articleListContainer {
     grid-column: 2;
     grid-row: 1;
+}
+
+@media screen and (max-width:1024px) {
+    .articleListContainer {
+        grid-column: 1;
+    }
 }
 
 .articleList {
@@ -352,3 +371,12 @@
     border: 1px solid #595959;
     border-collapse: collapse;
 }
+
+.articleMainContainer .markdown-body {
+    width: 100%;
+}
+
+.articleMainContainer :global(.markdown-body) {
+    /* ベースとなるスタイル上書き */
+    width: 100%;
+  }

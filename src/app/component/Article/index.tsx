@@ -13,6 +13,9 @@ export default async function Article({ data }: Props) {
 
   return (
     <article className={index.article}>
+      <div className={index.articleListContainer}>
+        <TableOfContents toc={toc} />
+      </div>
       <div className={index.articleMainContainer}>
         <div
           className="markdown-body"
@@ -20,9 +23,6 @@ export default async function Article({ data }: Props) {
             __html: data.body,
           }}
         />
-      </div>
-      <div className={index.articleListContainer}>
-        <TableOfContents toc={toc} />
       </div>
     </article>
   );
