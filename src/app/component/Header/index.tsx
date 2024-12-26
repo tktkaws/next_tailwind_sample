@@ -1,5 +1,4 @@
 import styles from "./index.module.css";
-import { useCallback } from "react";
 
 export default function Header() {
  

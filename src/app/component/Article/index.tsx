@@ -1,4 +1,4 @@
-import type { Blog, getBlogsList } from "@/app/_libs/microcms";
+import type { Blog } from "@/app/_libs/microcms";
 import index from "./index.module.css";
 import "github-markdown-css";
 import { renderToc } from "@/app/_libs/render-toc";

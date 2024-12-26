@@ -2,6 +2,7 @@
 import styles from "./index.module.css";
 import { useCallback } from "react";
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,19 +34,29 @@ export default function Footer() {
       <footer className={styles.footer_sp}>
         {isVisible && (
           <div className={styles.btnWrapper}>
-            <a href="/">
-              <img
-                src="/icon_home.svg"
-                alt="トップページ"
-                className={styles.goToHomeButton}
-              />
-            </a>
+            <button
+                onClick={() => window.location.href = '/'}
+                className={styles.goToTopButton}
+                aria-label="トップページへ移動"
+              >
+                <Image
+                  src="/icon_home.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+              </button>
             <button
               onClick={scrollToTop}
               className={styles.goToTopButton}
               aria-label="ページトップへ戻る"
             >
-              <img src="/icon_top.svg" alt="" />
+              <Image 
+                src="/icon_top.svg" 
+                alt="" 
+                width={24} 
+                height={24}
+              />
             </button>
           </div>
         )}

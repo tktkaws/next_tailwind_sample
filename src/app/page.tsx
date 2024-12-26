@@ -11,7 +11,7 @@ export default async function Home() {
   const tags = await getAllTags({});
 
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
+    <div>
       <main id="main-content" tabIndex={-1} className={styles.main}>
         <div className={styles.titleContainer}>
           <div className={styles.title}>
