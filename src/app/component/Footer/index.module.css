@@ -3,9 +3,10 @@
     border-top: solid 1px#cfcece;
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
-    height: 3rem;
+    height: 6rem;
     align-items: center;
 }
+
 @media screen and (max-width:1440px) {
     .footer {
         grid-template-columns: 1fr 1200px 1fr;
@@ -14,17 +15,59 @@
 
 @media screen and (max-width:1217px) {
     .footer {
-        grid-template-columns: 4% 1fr 4%;
+        grid-template-columns: 4% 92% 4%;
     }
 }
 
 @media screen and (max-width:1024px) {
     .footer {
-        grid-template-columns: 4% 1fr 4%;
+        display: none;
     }
 }
 
 .copyLight {
     grid-column: 2;
-    text-align: center;
+    width: fit-content;
+    justify-self: center;
+}
+
+
+.footer_sp {
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    .footer_sp {
+        display: block;
+        margin-top: 4rem;
+        border-top: solid 1px#cfcece;
+        display: grid;
+        grid-template-columns: 4% 92% 4%;
+        height: 6rem;
+        align-items: end;
+        justify-content: center;
+    }
+}
+
+.btnWrapper {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    z-index: 50;
+}
+
+
+.goToHomeButton {
+    background-color: #000;
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.goToTopButton {
+    background-color: #000;
+    padding: .5rem;
+    border-radius: 50%;
 }
