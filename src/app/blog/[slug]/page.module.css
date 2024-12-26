@@ -61,13 +61,13 @@
 
 @media screen and (max-width:1217px) {
   .main {
-      grid-template-columns: 4% 1fr 4%;
+      grid-template-columns: 4% 92% 4%;
   }
 }
 
 @media screen and (max-width:1024px) {
   .main {
-      grid-template-columns: 4% 1fr 4%;
+      grid-template-columns: 4% 92% 4%;
   }
 }
 
@@ -281,6 +281,12 @@
   grid-template-columns: subgrid;
 }
 
+@media screen and (max-width:1024px) {
+  .blogTitleContainer {
+ 
+  }
+}
+
 .blogTitleContainerInner {
   grid-column: 2;
   display: grid;
@@ -303,8 +309,15 @@
   padding-bottom: 5rem;
 }
 
+@media screen and (max-width:1024px) {
+  .blogTitle {
+  font-size: 2rem;
+  }
+}
+
 .blogTitleText {
   font-weight: 800;
+  width: 100%;
 }
 
 .blogDate {
