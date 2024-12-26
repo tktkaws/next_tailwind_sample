@@ -7,6 +7,7 @@ import type {
 export type Blog = {
   title: string;
   body: string;
+  tags: Tag[];
 } & MicroCMSListContent;
 
 export type Tag = {
