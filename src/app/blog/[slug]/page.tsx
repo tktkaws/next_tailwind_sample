@@ -5,6 +5,7 @@ import index from "./page.module.css";
 import Date from "@/app/component/Date";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import CardList from "@/app/component/CardList";
+import Link from "next/link";
 
 type Props = {
   params: {
@@ -17,7 +18,7 @@ export default async function Page({ params }: Props) {
   const listData = await getBlogsList({
     limit: TOP_NEWS_LIMIT,
   });
-  console.log(listData);
+  console.log(data);
 
   return (
     <>
@@ -31,7 +32,18 @@ export default async function Page({ params }: Props) {
               <p className={index.blogDate}>
                 <Date date={data.publishedAt ?? data.createdAt} />
               </p>
-              <p className={index.blogTag}>A11Y</p>
+              <div className={index.blogListItemTagWrapper}>
+                {data.tags &&
+                  data.tags.map((tag, idx) => (
+                    <Link
+                      key={idx}
+                      href={`/tags/${tag.id}`}
+                      className={index.blogListItemTag}
+                    >
+                      {tag.title}
+                    </Link>
+                  ))}
+              </div>
             </div>
           </div>
           <Article data={data} />
