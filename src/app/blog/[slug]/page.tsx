@@ -6,6 +6,8 @@ import Date from "@/app/component/Date";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import CardList from "@/app/component/CardList";
 import Link from "next/link";
+import type { Blog, MicroCMSListResponse } from "@/app/_libs/microcms";
+
 
 type Props = {
   params: {
@@ -15,14 +17,14 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const data = await getBlogDetail(params.slug).catch(notFound);
-  const listData = await getBlogsList({
+  const listData: MicroCMSListResponse<Blog> = await getBlogsList({
     limit: TOP_NEWS_LIMIT,
   });
-  console.log(data);
+  // console.log(data);
+  console.log(listData);
 
   return (
     <>
-      <div className="font-[family-name:var(--font-geist-sans)]">
         <main className={index.main}>
           <div className={index.blogTitleContainer}>
             <div className={index.blogTitleContainerInner}>
@@ -51,7 +53,6 @@ export default async function Page({ params }: Props) {
 
           <CardList data={listData} />
         </main>
-      </div>
     </>
   );
 }
