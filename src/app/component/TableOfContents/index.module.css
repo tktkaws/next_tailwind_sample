@@ -2,14 +2,20 @@
   font-size: 2rem;
 }
 
-.TableOfContentsList {
+.TableOfContentsTitle {
   margin-top: 3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.TableOfContentsList {
+  margin-top: 1rem;
   display: grid;
   gap: 1rem;
   font-weight: bold;
   position: sticky;
   top: 4rem;
-  /* border: solid 1px; */
+  font-size: 1rem;
 }
 
 .TableOfContentsList li a::before {
@@ -18,3 +24,6 @@
   margin-right: .5rem;
   color: #e5e7eb;
 }
+
+
+

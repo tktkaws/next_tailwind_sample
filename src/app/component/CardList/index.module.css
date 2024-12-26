@@ -17,7 +17,7 @@
 
 @media screen and (max-width:1024px) {
     .blogList {
-        grid-template-columns: repeat(1, 100%);
+        grid-template-columns: 100%;
     }
 }
 

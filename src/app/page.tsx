@@ -1,11 +1,8 @@
 import styles from "./styles.module.css";
 import { getBlogsList, getAllTags } from "@/app/_libs/microcms";
 import Link from "next/link";
-import CardList from "@/app/component/CardList"; 
-import { MEMBERS_LIST_LIMIT } from '@/app/_constants'
-import OverflowDebugger from './component/OverflowDebugger';
-
-
+import CardList from "@/app/component/CardList";
+import { MEMBERS_LIST_LIMIT } from "@/app/_constants";
 
 export default async function Home() {
   const data = await getBlogsList({
@@ -15,8 +12,7 @@ export default async function Home() {
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
-       <OverflowDebugger />
-      <main className={styles.main}>
+      <main id="main-content" tabIndex={-1} className={styles.main}>
         <div className={styles.titleContainer}>
           <div className={styles.title}>
             <p className={styles.titleText}>
@@ -26,10 +22,10 @@ export default async function Home() {
           </div>
         </div>
         <div className={styles.lead}>
-        <p>
-          アクセシビリティ、モダンフロントエンド関係を中心とした技術ブログです。
-        </p>
-        <p>自身の知識を整理することを第一の目的としています。</p>
+          <p>
+            アクセシビリティ、モダンフロントエンド関係を中心とした技術ブログです。
+          </p>
+          <p>自身の知識を整理することを第一の目的としています。</p>
         </div>
         <ul className={styles.tabList}>
           <li>
@@ -45,7 +41,7 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-        <CardList data={data}/>
+        <CardList data={data} />
       </main>
     </div>
   );

@@ -7,6 +7,7 @@ type Props = {
 export default function TableOfContents({ toc }: Props) {
   return (
     <>
+      <h2 className={styles.TableOfContentsTitle}>目次</h2>
      <ul className={styles.TableOfContentsList}>
         {toc.map((item) => (
           <li key={item.id}>

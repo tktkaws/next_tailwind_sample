@@ -33,10 +33,12 @@ export default async function TagPage({
             </p>
           </div>
         </div>
-        <p>
-          アクセシビリティ、モダンフロントエンド関係を中心とした技術ブログです。
-        </p>
-        <p>自身の知識を整理することを第一の目的としています。</p>
+        <div className={styles.lead}>
+          <p>
+            アクセシビリティ、モダンフロントエンド関係を中心とした技術ブログです。
+          </p>
+          <p>自身の知識を整理することを第一の目的としています。</p>
+        </div>
         <ul className={styles.tabList}>
           <li>
             <Link href="/" className={styles.tabListItem}>
