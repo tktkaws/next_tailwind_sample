@@ -2,7 +2,10 @@ import { createClient } from "microcms-js-sdk";
 import type {
   MicroCMSQueries,
   MicroCMSListContent,
+  MicroCMSListResponse,
 } from "microcms-js-sdk";
+
+export type { MicroCMSListResponse };
 
 export type Blog = {
   title: string;
