@@ -6,7 +6,7 @@ type Props = {
 };
 export default function TableOfContents({ toc }: Props) {
   return (
-    <>
+      <div className={styles.TableOfContents}>
       <h2 className={styles.TableOfContentsTitle}>目次</h2>
      <ul className={styles.TableOfContentsList}>
         {toc.map((item) => (
@@ -15,6 +15,6 @@ export default function TableOfContents({ toc }: Props) {
           </li>
         ))}
       </ul>
-    </>
+      </div>
   );
 };
