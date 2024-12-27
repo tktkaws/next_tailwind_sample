@@ -8,7 +8,7 @@ export default async function Home() {
   const data = await getBlogsList({
     limit: MEMBERS_LIST_LIMIT,
   });
-  const tags = await getAllTags({});
+  const tags = await getAllTags();
 
   return (
     <div>
@@ -41,7 +41,7 @@ export default async function Home() {
             </li>
           ))}
         </ul>
-        <CardList data={data} />
+        <CardList data={data.contents} />
       </main>
     </div>
   );

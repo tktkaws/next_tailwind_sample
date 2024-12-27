@@ -5,7 +5,7 @@ import CardList from "@/app/component/CardList";
 import { MEMBERS_LIST_LIMIT } from '@/app/_constants'
 
 export async function generateStaticParams() {
-  const tags = await getAllTags({});
+  const tags = await getAllTags();
   return tags.contents.map((tag) => ({
     tagId: tag.id,
   }));
@@ -20,7 +20,7 @@ export default async function TagPage({
     limit: MEMBERS_LIST_LIMIT,
     filters: `tags[contains]${tagId}`,
   });
-  const tags = await getAllTags({});
+  const tags = await getAllTags();
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
@@ -58,7 +58,7 @@ export default async function TagPage({
             </li>
           ))}
         </ul>
-        <CardList data={data} />
+        <CardList data={data.contents} />
       </main>
     </div>
   );

@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from 'next/image';
 
 type Props = {
-  data: Blog;
+  data: Blog[];
 };
 
 export default function CardList({ data }: Props) {
   return (
     <>
       <ul className={styles.blogList}>
-        {data.contents.map((blog) => (
+        {data.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`} className={styles.blogListItem}>
               <p className={styles.blogListItemTitle}>{blog.title}</p>

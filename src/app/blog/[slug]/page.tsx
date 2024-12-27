@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
-import { getBlogDetail, getBlogsList } from "@/app/_libs/microcms";
+// import { getBlogDetail, getBlogsList } from "@/app/_libs/microcms";
+import { getBlogDetail } from "@/app/_libs/microcms";
 import Article from "@/app/component/Article";
 import index from "./page.module.css";
 import Date from "@/app/component/Date";
-import { TOP_NEWS_LIMIT } from "@/app/_constants";
-import CardList from "@/app/component/CardList";
+// import { TOP_NEWS_LIMIT } from "@/app/_constants";
+// import CardList from "@/app/component/CardList";
 import Link from "next/link";
-import type { Blog, MicroCMSListResponse } from "@/app/_libs/microcms";
+// import type { Blog, MicroCMSListResponse } from "@/app/_libs/microcms";
 
 
 type Props = {
@@ -17,11 +18,11 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const data = await getBlogDetail(params.slug).catch(notFound);
-  const listData: MicroCMSListResponse<Blog> = await getBlogsList({
-    limit: TOP_NEWS_LIMIT,
-  });
+  // const listData: MicroCMSListResponse<Blog> = await getBlogsList({
+  //   limit: TOP_NEWS_LIMIT,
+  // });
   // console.log(data);
-  console.log(listData);
+  // console.log(listData);
 
   return (
     <>
@@ -51,7 +52,7 @@ export default async function Page({ params }: Props) {
           <Article data={data} />
           <h2 className={index.heading}>最新記事</h2>
 
-          <CardList data={listData} />
+          {/* <CardList data={listData.contents} /> */}
         </main>
     </>
   );
