@@ -20,9 +20,12 @@ export type Tag = {
   slug: string;
 } & MicroCMSListContent;
 
-export type Toc = {
+export type TocItem = {
+  id: string;
   text: string;
 };
+
+export type Toc = TocItem[];
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
