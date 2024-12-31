@@ -1,0 +1,72 @@
+.titleContainer {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: grid;
+    justify-self: start;
+    align-items: start;
+}
+
+@media screen and (max-width:768px) {
+    .titleContainer {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.title {
+    display: grid;
+    justify-self: start;
+    align-items: start;
+    /* width: 20rem; */
+    /* height: 20rem; */
+    /* background-color: #555555; */
+    /* color: #FFFFFF; */
+    box-sizing: border-box;
+    font-size: 8rem;
+    text-transform: uppercase;
+    border-radius: .2em;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+}
+
+@media screen and (max-width:1217px) {
+    .title {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+
+
+.titleText {
+    height: fit-content;
+    width: fit-content;
+    line-height: calc(16/16);
+}
+
+.titleTextSmall {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    width: 100%;
+    font-size: 1rem;
+}
