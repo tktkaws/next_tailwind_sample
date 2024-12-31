@@ -1,6 +1,5 @@
 import styles from "../../styles.module.css";
 import { getBlogsList, getAllTags } from "@/app/_libs/microcms";
-import Link from "next/link";
 import CardList from "@/app/component/CardList";
 import TitleContainer from "@/app/component/TitleContainer";
 import TagList from "@/app/component/TagList";
