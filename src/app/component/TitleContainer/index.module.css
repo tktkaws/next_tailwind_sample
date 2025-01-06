@@ -1,9 +1,8 @@
 .titleContainer {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    display: grid;
+
+    /* display: grid;
     justify-self: start;
-    align-items: start;
+    align-items: start; */
 }
 
 @media screen and (max-width:768px) {
@@ -21,6 +20,9 @@
     /* height: 20rem; */
     /* background-color: #555555; */
     /* color: #FFFFFF; */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    height: auto;
     box-sizing: border-box;
     font-size: 8rem;
     text-transform: uppercase;

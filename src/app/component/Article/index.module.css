@@ -379,4 +379,5 @@
 .articleMainContainer :global(.markdown-body) {
     /* ベースとなるスタイル上書き */
     width: 100%;
+    min-height: auto;
   }

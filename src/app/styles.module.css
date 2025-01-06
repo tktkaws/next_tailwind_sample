@@ -1,12 +1,11 @@
-
-
-
 .main {
     padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
+    grid-template-rows: auto auto 1fr;
     position: relative;
-    /* min-height: calc(100vh - 9rem); */
+    justify-content: center;
+    min-height: calc(100vh - 9rem);
 }
 
 @media screen and (max-width:1440px) {
