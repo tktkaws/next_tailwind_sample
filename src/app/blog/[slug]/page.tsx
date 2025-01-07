@@ -12,7 +12,7 @@ type Props = {
     slug: string;
   };
 };
-
+export const revalidate = 0;
 export default async function Page({ params }: Props) {
   const data = await getBlogDetail(params.slug).catch(notFound);
   const listData = await getBlogsList({
