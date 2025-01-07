@@ -1,8 +1,6 @@
 import styles from '../styles.module.css'
 
-export const revalidate = 0;
-
-export default async function BlogPage() {
+export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
         <main className={styles.main}>
