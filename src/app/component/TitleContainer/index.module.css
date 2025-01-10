@@ -5,21 +5,17 @@
     align-items: start; */
 }
 
-@media screen and (max-width:768px) {
+/* @media screen and (max-width:768px) {
     .titleContainer {
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-}
+} */
 
 .title {
     display: grid;
     justify-self: start;
     align-items: start;
-    /* width: 20rem; */
-    /* height: 20rem; */
-    /* background-color: #555555; */
-    /* color: #FFFFFF; */
     padding-top: 8rem;
     padding-bottom: 8rem;
     height: auto;
@@ -52,6 +48,8 @@
 @media screen and (max-width:480px) {
     .title {
         font-size: 2rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 }
 

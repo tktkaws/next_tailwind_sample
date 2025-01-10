@@ -10,7 +10,6 @@ type Props = {
 
 export default async function Article({ data }: Props) {
   const toc = renderToc(data.body);
-
   return (
     <article className={index.article}>
       <div className={index.articleListContainer}>

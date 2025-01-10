@@ -305,6 +305,7 @@
 @media screen and (max-width:1024px) {
     .article {
         grid-template-columns: 100%;
+        overflow-x: hidden;
     }
 }
 
